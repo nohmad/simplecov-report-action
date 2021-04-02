@@ -1,0 +1,19 @@
+name: Coverage Report for simplecov format
+description: Leave comment on the pull request with code coverage
+author: GY Noh
+branding:
+  icon: check-square
+  color: green
+inputs:
+  github-token:
+    description: secrets.GITHUB_TOKEN
+    required: true
+  simplecov-json-path:
+    description: Relative path of coverage/coverage.json
+    required: false
+    default: coverage/coverage.json
+  ignore-error:
+    description: Do not make the build failure
+runs:
+  using: node12
+  main: dist/index.js
