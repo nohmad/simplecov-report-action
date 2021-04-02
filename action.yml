@@ -14,6 +14,7 @@ inputs:
     default: coverage/coverage.json
   ignore-error:
     description: Do not make the build failure
+    default: true
 runs:
   using: node12
   main: dist/index.js
